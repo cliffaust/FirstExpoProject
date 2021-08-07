@@ -6,7 +6,20 @@ const Profile = () => {
   return (
     <View style={styles.container}>
       <View style={styles.headerBox}>
-        <Text style={styles.header}>Edit Pofile</Text>
+        <View style={{ flex: 0.3 }}>
+          <Ionicons
+            name="arrow-back"
+            style={styles.iconBack}
+            size={34}
+            color="black"
+          />
+        </View>
+        <View
+          style={{ flex: 0.3, justifyContent: "center", alignItems: "center" }}
+        >
+          <Text style={styles.header}>Edit Pofile</Text>
+        </View>
+        <View style={{ flex: 0.3 }}></View>
       </View>
       <View style={styles.profileImage}>
         <Image
@@ -17,12 +30,6 @@ const Profile = () => {
           <Ionicons name="camera-outline" size={24} color="white" />
         </View>
       </View>
-      <Ionicons
-        name="arrow-back"
-        style={styles.iconBack}
-        size={34}
-        color="black"
-      />
       <View style={styles.mainBox}>
         <View style={styles.textBox}>
           <Text style={styles.primaryText}>School</Text>
@@ -71,11 +78,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 10,
+    flexDirection: "row",
   },
 
   header: {
+    flex: 0.5,
     fontSize: 20,
     fontWeight: "bold",
+    alignSelf: "center",
   },
 
   profileImage: {
@@ -113,11 +123,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  iconBack: {
-    position: "absolute",
-    top: 20,
-    left: 0,
-  },
+  iconBack: {},
 
   buttonText: {
     fontSize: 20,
